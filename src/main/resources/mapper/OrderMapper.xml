@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.OrderMapper">
+    <select id="info">
+        SELECT * FROM ORDERTEST where id = #{id}
+    </select>
+    <select id="list" resultType="hashmap">
+        SELECT * FROM ORDERTEST
+    </select>
+    <insert id="create" >
+        INSERT INTO ORDERTEST (id, orderer, totalAmount, deliveryFee, regDateTime, delYn) VALUES (#{id}, #{orderer}, #{totalAmount}, #{deliveryFee}, #{regDateTime}, #{delYn})
+    </insert>
+    <update id="delete">
+        UPDATE ORDERTEST SET delYn = #{delYn}, modDateTime = #{modDateTime} where id = #{id}
+    </update>
+    <update id="update">
+        UPDATE ORDERTEST SET modDateTime = #{modDateTime}, totalAmount = #{totalAmount}, deliveryFee = #{deliveryFee} where id = #{id}
+    </update>
+
+</mapper>
+
