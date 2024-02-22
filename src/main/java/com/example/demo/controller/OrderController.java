@@ -55,7 +55,7 @@ class OrderController {
     @GetMapping("/order/info")
     public OrderDto info(@RequestParam int orderId){
 
-        return orderService.info(orderId);ddd
+        return orderService.info(orderId);
     }
 
     /**

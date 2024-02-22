@@ -1,6 +1,4 @@
 package com.example.demo.dto;
-import com.example.demo.dto.BaseDto;
-import com.example.demo.dto.Customer;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -12,12 +10,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 public class OrderDto extends BaseDto {
-
-    /**
-     * 고객정보
-     */
-    private Customer customer;
-
     /**
      * 주문자명
      */
